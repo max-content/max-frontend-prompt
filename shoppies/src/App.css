@@ -1,0 +1,18 @@
+:root {
+  --lime: #96BF46;
+  --green: #5E8E3D;
+  --offWhite:#FAF7ED;
+  --darkGreen: #014C3E;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--offWhite);
+  text-align: center;
+}
+
+h1 {
+  color: var(--darkGreen);
+  text-align: center;
+}
