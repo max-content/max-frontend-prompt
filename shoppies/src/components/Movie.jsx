@@ -1,16 +1,16 @@
 import React from 'react';
-import { Card, CardGrid } from '../Styled';
-import axios from 'axios';
-import { Link } from '@reach/router';
+import { Card } from '../Styled';
 
-export default ({title, poster}) => {
+export default (props) => {
 
     return(
-        <div>
             <Card>
-                <h1>{title}</h1>
-                <img src={poster} alt={title} />
+                <div className="flexy">
+                    <h1>{props.title}</h1>
+                    <p>({props.year})</p>
+                </div>
+                <img src={props.poster} alt={props.title} />
+                {props.children}
             </Card>
-        </div>
     )
 }

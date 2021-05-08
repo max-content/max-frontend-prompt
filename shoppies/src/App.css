@@ -16,3 +16,11 @@ h1 {
   color: var(--darkGreen);
   text-align: center;
 }
+
+.flexy {
+  display: flex;
+}
+
+p {
+  margin-left: 5px;
+}

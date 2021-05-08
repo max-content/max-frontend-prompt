@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { CardGrid, Container, Header } from './Styled';
+import { CardGrid, Container, Header, SubmitMe } from './Styled'; //styled components
 import Search from './components/Search';
 import Movie from './components/Movie.jsx';
 
@@ -17,10 +17,10 @@ const App = () => {
 
     const [loading, setLoading] = useState(true),
         [movies, setMovies] = useState([]),
-        [query, setQuery] = useState('');
+        [query, setQuery] = useState(''),
+        [nominations, setNominations] = useState([]);
 
     const onSubmitHandler = () => {
-
         axios 
         .get(`${API_URL}?s="${query}"&${API_KEY}`)
         .then(res => {
@@ -34,6 +34,16 @@ const App = () => {
         .catch(err => {
             console.log(err)
         });
+    }
+
+    const onNominateHandler = match => {
+        if(nominations.length === 5) {
+            alert("You have selected 5 movies");
+        } else {
+            const temp = [...nominations];
+            temp.push(match);
+            setNominations(temp);
+        }
     }
 
     return (
@@ -53,30 +63,19 @@ const App = () => {
                     <CardGrid>
                         <>
                         {movies.map((match, i) => (
-                            <Movie
-                            key={i}
-                            title={match.Title}
-                            poster={match.Poster} {...movies} />
+                                <Movie
+                                    key={i}
+                                    title={match.Title}
+                                    poster={match.Poster} 
+                                    year={match.Year} {...movies} >
+                                    <SubmitMe type="submit" 
+                                        onClick={e => onNominateHandler(match)}>
+                                        Nominate
+                                    </SubmitMe>
+                                </Movie>
                             ))}
                         </>
                 </CardGrid>
-
-        {/* {!loading && query ? (
-            <>
-                {matches.map((match, i) => (
-                    <Movie
-                        key={i}
-                        title={match.item.title}
-                        poster={match.item.poster} />
-                ))}
-            </>
-        ) : (
-            <>
-                {movies.map((movie, i) => (
-                    <Movie key={i} {...movie} />
-                ))}   
-            </>
-        )} */}
             </Container>
         </div>
     )

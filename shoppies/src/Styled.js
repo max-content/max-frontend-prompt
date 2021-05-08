@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
 export const Header = styled.header`
-    background: var(--darkGreen);
+    background: var(--green);
     color: var(--offWhite);
     padding: 20px;
     h1 {
@@ -64,7 +64,7 @@ export const Card = styled(motion.div)`
     padding: 15px;
     margin: 10px;
     width: max-content;
-    height: 220px;
+    height: calc(max-content + 5px);
     background-color: var(--darkGreen);
     box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
     h1 {
