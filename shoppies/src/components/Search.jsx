@@ -9,7 +9,7 @@ export default function Search({ onChange, onSubmitHandler, placeholder, query }
                 type="text"
                 onChange={onChange}
                 placeholder={placeholder}
-                value={query}
+                value={query} 
             />
             <SubmitMe onClick={onSubmitHandler}>
                 Search
