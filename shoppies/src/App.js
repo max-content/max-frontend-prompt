@@ -34,14 +34,20 @@ const App = () => {
             console.log(res.data.Search);
             console.log(`${API_URL}?s=${query}&${API_KEY}&${API_TYPE}`);
             console.log("I am here");
-            // if(query === undefined) {
-            //     setErrors= 'This movie is unavailable please try to nominate something else.'
-            // } else {
-            //     setMovies(res.data.Search);
-            //     setLoading(false);
-            // }
-            setMovies(res.data.Search);
-            setLoading(false);
+            if(res.data.Search === undefined) {
+                setErrors('This movie is unavailable please try to nominate something else.')
+            } else if(res.data.Search === ''){
+                setErrors('');
+            } else if(res.data.Search.type !== API_TYPE){
+                setErrors('Please enter a movie not a series');
+            } else if(res.data.Search.type === '' || API_TYPE) {
+                setErrors('');
+            } else {
+                setMovies(res.data.Search);
+                setLoading(false);
+            }
+            // setMovies(res.data.Search);
+            // setLoading(false);
         })
         .catch(err => {
             console.log(err)
@@ -94,7 +100,7 @@ const App = () => {
                         value={query}
                         placeholder="Search"
                         />
-                        {/* <h1>{errors}</h1> */}
+                        <div>{errors}</div>
                     <CardGrid>
                         <>
                         {movies.map((match, i) => (
