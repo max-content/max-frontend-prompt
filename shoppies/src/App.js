@@ -38,10 +38,6 @@ const App = () => {
                 setErrors('This movie is unavailable please try to nominate something else.')
             } else if(res.data.Search === ''){
                 setErrors('');
-            } else if(res.data.Search.type !== API_TYPE){
-                setErrors('Please enter a movie not a series');
-            } else if(res.data.Search.type === '' || API_TYPE) {
-                setErrors('');
             } else {
                 setMovies(res.data.Search);
                 setLoading(false);
