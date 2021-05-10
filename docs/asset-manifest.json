@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/max-frontend-prompt/static/css/main.2f1894a6.chunk.css",
+    "main.js": "/max-frontend-prompt/static/js/main.f895745d.chunk.js",
+    "main.js.map": "/max-frontend-prompt/static/js/main.f895745d.chunk.js.map",
+    "runtime-main.js": "/max-frontend-prompt/static/js/runtime-main.0654dcd2.js",
+    "runtime-main.js.map": "/max-frontend-prompt/static/js/runtime-main.0654dcd2.js.map",
+    "static/css/2.d16a2693.chunk.css": "/max-frontend-prompt/static/css/2.d16a2693.chunk.css",
+    "static/js/2.7148b1b0.chunk.js": "/max-frontend-prompt/static/js/2.7148b1b0.chunk.js",
+    "static/js/2.7148b1b0.chunk.js.map": "/max-frontend-prompt/static/js/2.7148b1b0.chunk.js.map",
+    "static/js/3.315f3d54.chunk.js": "/max-frontend-prompt/static/js/3.315f3d54.chunk.js",
+    "static/js/3.315f3d54.chunk.js.map": "/max-frontend-prompt/static/js/3.315f3d54.chunk.js.map",
+    "index.html": "/max-frontend-prompt/index.html",
+    "static/css/2.d16a2693.chunk.css.map": "/max-frontend-prompt/static/css/2.d16a2693.chunk.css.map",
+    "static/css/main.2f1894a6.chunk.css.map": "/max-frontend-prompt/static/css/main.2f1894a6.chunk.css.map",
+    "static/js/2.7148b1b0.chunk.js.LICENSE.txt": "/max-frontend-prompt/static/js/2.7148b1b0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0654dcd2.js",
+    "static/css/2.d16a2693.chunk.css",
+    "static/js/2.7148b1b0.chunk.js",
+    "static/css/main.2f1894a6.chunk.css",
+    "static/js/main.f895745d.chunk.js"
+  ]
+}

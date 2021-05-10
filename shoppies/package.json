@@ -1,5 +1,6 @@
 {
   "name": "shoppies",
+  "homepage": "https://max-content.github.io/max-frontend-prompt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
